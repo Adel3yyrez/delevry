@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+
+
+@layer components {
+    .path {
+      stroke-dasharray: 15;
+    }
+  }
+
+.home{
+    background: url("../img/pattern-randomized.svg");
+    
+}
+
+.title:hover,
+.nav a:hover,
+i:hover,
+.give-news a:hover,
+.project a:hover,
+footer a:hover{
+    color: #6C63FF;
+    cursor: pointer;
+    font-weight: bold;
+}
+.remove{
+    display: none !important;
+}
+.nav-top{
+    top: -27% !important;
+}
+.shadow-xl:hover {
+    --tw-shadow: 0 20px 25px -5px #6b63ff65;
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #6b63ff), var(--tw-ring-shadow, 0 0 #6b63ff), var(--tw-shadow);
+}
+.about h1::before,
+.serveces h1::before,
+.project h1::before {
+    width: 60px;
+    height: 3px;
+    display: block;
+    content: "";
+    position: relative;
+    margin-top: 10px;
+    bottom: -40px;
+    left: 50%;
+    background-color: #6C63FF;
+  }
+
+  .about h1:after,
+  .serveces h1::after,
+  .project h1::after {
+    width: 100px;
+    height: 3px;
+    display: block;
+    content: "";
+    position: relative;
+    margin-top: 13px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: #6C63FF;
+  }
+  .about p,
+  .serveces p,
+  .project p{
+    direction: rtl;
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    height: 100%;
+    min-height: 100vh;
+}
+
+[x-cloak] { display: none !important; }
+
+@tailwind utilities;
