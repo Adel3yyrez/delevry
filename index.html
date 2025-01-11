@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     <!-- tlottie -->
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-    <style>
+   <style>
         
         *{
             scroll-behavior: smooth;
@@ -58,6 +58,31 @@
             animation: wave-move 6s infinite linear;
             opacity: 0.2;
         }
+        .news-ticker {
+            overflow: hidden;
+            white-space: nowrap;
+            color: white;
+            position: relative;
+            top: 14%;
+            z-index: 9;
+        }
+        .news-ticker span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker 20s linear infinite;
+        }
+        .achievement-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        @keyframes ticker {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0%); }
+        }
 
         @keyframes wave-move {
             0% {
@@ -76,7 +101,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
     <!-- Header -->
-    <header class=" text-white fixed w-full z-50">
+    <header class="text-white fixed w-full z-50">
         <div class="container mx-auto flex justify-between items-center p-4">
             <h1 class="text-2xl font-bold">خدمات التوصيل</h1>
             <button id="menu-toggle" class="sm:hidden focus:outline-none">
@@ -84,7 +109,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
-            <nav class="hidden sm:flex ">
+            <nav class="hidden sm:flex">
                 <a href="#services" class="px-4 hover:underline">الخدمات</a>
                 <a href="#order" class="px-4 hover:underline">اطلب الآن</a>
                 <a href="#track" class="px-4 hover:underline">تتبع الطلب</a>
@@ -93,56 +118,100 @@
             </nav>
         </div>
         <!-- Sliding Menu for Mobile -->
-        <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-blue-700 text-white p-6 menu-closed sm:hidden">
-            <button id="close-menu" class="absolute top-4 right-4 focus:outline-none">
+        <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white p-6 menu-closed sm:hidden">
+            <button id="close-menu" class="absolute text-black top-4 right-4 focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
-            <ul class="mt-8 space-y-4">
-                <li><a href="#services" class="block px-4 py-2 hover:bg-blue-700 rounded">الخدمات</a></li>
-                <li><a href="#order" class="block px-4 py-2 hover:bg-blue-700 rounded">اطلب الآن</a></li>
-                <li><a href="#track" class="block px-4 py-2 hover:bg-blue-700 rounded">تتبع الطلب</a></li>
-                <li><a href="#about" class="block px-4 py-2 hover:bg-blue-700 rounded">من نحن</a></li>
-                <li><a href="#contact" class="block px-4 py-2 hover:bg-blue-700 rounded">اتصل بنا</a></li>
+            <div class="p-2 text-center">
+                <h2 class="text-2xl font-bold text-blue-700"> موقع التوصيلات</h2>
+            </div>
+            <hr>
+            <ul class="mt-8 space-y-4" dir="rtl">
+                <li><a href="#services" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded">الخدمات</a></li>
+                <li><a href="#order" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded">اطلب الآن</a></li>
+                <li><a href="#track" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded">تتبع الطلب</a></li>
+                <li><a href="#about" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded">من نحن</a></li>
+                <li><a href="#contact" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded">اتصل بنا</a></li>
             </ul>
+            <div class=" list-footer text-blue-700 absolute bottom-0 z-10 p-3 text-center  w-full " style="left: 50%;transform: translateX(-50%);">
+                <hr><br>
+                جميع الحقوق محفوظة 2025
+            </div>
         </div>
     </header>
+
+    <!-- شريط الأخبار المتحرك -->
+    <div class="news-ticker w-full lg:w-1/3 mx-auto">
+        <span dir="rtl">عرض خاص: احصل على خصم 20% على جميع الطلبات هذا الأسبوع! 🎉</span>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-section relative bg-gray-200 pb-12 pt-24 overflow-hidden">
         <div class="container mx-auto flex hero-section-container flex-wrap lg:flex-nowrap items-center relative z-10">
             <!-- Image Section -->
             <div class="w-full lg:w-1/2 mb-6 lg:mb-0 p-3">
-                <dotlottie-player src="https://lottie.host/4d993ff9-813d-4c83-87ef-638308f1dfba/JeiuOzMz5i.lottie" background="transparent" speed="0.5" class="lg:w-4/5 w-full mx-auto " loop autoplay></dotlottie-player>
+                <dotlottie-player src="https://lottie.host/4d993ff9-813d-4c83-87ef-638308f1dfba/JeiuOzMz5i.lottie" background="transparent" speed="0.5" class="lg:w-4/5 w-full mx-auto" loop autoplay></dotlottie-player>
             </div>
             <!-- Text Section -->
             <div class="w-full lg:w-1/2 text-center text-white">
                 <h2 class="text-4xl font-bold mb-4">مرحبًا بك في خدمات التوصيل</h2>
                 <p class="text-lg mb-6">نحن نقدم أسرع وأسهل حلول التوصيل لتلبية احتياجاتك.</p>
-                <a href="#order" class="bg-blue-600 transition-colors text-white py-2 px-6 rounded hover:bg-blue-700">اطلب الآن</a>
+                <a href="#order" class="bg-blue-700 shadow-sm  transition-colors text-white py-1 px-24 rounded hover:bg-blue-800">اطلب الآن</a>
             </div>
         </div>
         <!-- Background Animation -->
         <div class="animated-waves absolute inset-0 -z-1"></div>
     </section>
-
+    <!-- About Us Section -->
+    <section id="about" class="bg-gray-200 py-12" data-aos="fade" data-aos-delay="50">
+        <div class="container mx-auto text-center">
+            <h3 class="text-3xl font-bold mb-6">من نحن</h3>
+            <p>نحن شركة متخصصة في خدمات التوصيل، نهدف إلى تقديم حلول مبتكرة وآمنة لنقل الطلبات والطرود.</p>
+        </div>
+        <!-- Achievements Section -->
+        <div id="achievements" class="py-12 px-3 bg-gray-50">
+            <div class="container mx-auto text-center">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Achievement 1: عدد الطلبيات -->
+                    <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="public/img/Free shipping-bro.svg" class=" w-24 h-auto mx-auto" alt=" Free shipping Image">
+                        <h4><span id="orderCount">0</span>+</h4>
+                        <p>عدد الطلبيات</p>
+                    </div>
+                    <!-- Achievement 2: عدد الشاحنات -->
+                    <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="public/img/Free shipping-pana.svg" class=" w-24 h-auto mx-auto" alt=" Free shipping Image">
+                        <h4><span id="truckCount">0</span>+</h4>
+                        <p>عدد الشاحنات</p>
+                    </div>
+                    <!-- Achievement 3: عدد الموزعين -->
+                    <div class="achievement-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="public/img/Delivery-cuate.svg" class=" w-24 h-auto mx-auto" alt=" Free shipping Image">
+                        <h4><span id="distributorCount">0</span>+</h4>
+                        <p>عدد الموزعين</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Services Section -->
     <section id="services" class="py-12 px-3">
         <div class="container mx-auto text-center">
             <h3 class="text-3xl font-bold mb-6">خدماتنا</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 shadow-lg rounded-2xl">
+                <div class="bg-white p-6 shadow-lg rounded-2xl" data-aos="fade-up">
                     <img src="public/img/Logistics-rafiki (1).svg" alt="img" class="w-24 h-auto mx-auto">
                     <h4 class="text-xl font-bold mb-2">توصيل الطلبات</h4>
                     <p>نقوم بتوصيل الطلبات بسرعة وأمان.</p>
                 </div>
-                <div class="bg-white p-6 shadow-lg rounded-2xl">
+                <div class="bg-white p-6 shadow-lg rounded-2xl" data-aos="fade-up" data-aos-delay="100">
                     <img src="public/img/Heavy box-amico.svg" alt="img" class="w-24 h-auto mx-auto">
                     <h4 class="text-xl font-bold mb-2">نقل الطرود</h4>
                     <p>نقل الطرود الصغيرة والكبيرة بأفضل الأسعار.</p>
                 </div>
-                <div class="bg-white p-6 shadow-lg rounded-2xl">
+                <div class="bg-white p-6 shadow-lg rounded-2xl" data-aos="fade-up" data-aos-delay="200">
                     <img src="public/img/Take Away-rafiki.svg" alt="img" class="w-24 h-auto mx-auto">
                     <h4 class="text-xl font-bold mb-2">التوصيل السريع</h4>
                     <p>خدمة توصيل سريعة في أقل وقت ممكن.</p>
@@ -152,8 +221,8 @@
     </section>
 
     <!-- Order Section -->
-    <section id="order" class="bg-gray-200 py-12">
-        <div class="container mx-auto">
+    <section id="order" class="bg-gray-200 py-12 px-3" >
+        <div class="container mx-auto" data-aos="fade" data-aos-delay="100">
             <h3 class="text-3xl font-bold text-center mb-6">اطلب الآن</h3>
             <form class="bg-white p-6 shadow rounded max-w-lg mx-auto">
                 <div class="mb-4">
@@ -186,7 +255,7 @@
 
     <!-- Track Order Section -->
     <section id="track" class="py-12 px-3">
-        <div class="container mx-auto text-center">
+        <div class="container mx-auto text-center"  data-aos="zoom-in" data-aos-delay="100">
             <h3 class="text-3xl font-bold mb-6">تتبع الطلب</h3>
             <form class="max-w-md mx-auto">
                 <input type="text" class="w-full border border-gray-300 p-2 rounded mb-4" placeholder="أدخل رقم الطلب">
@@ -195,17 +264,9 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="bg-gray-200 py-12">
-        <div class="container mx-auto text-center">
-            <h3 class="text-3xl font-bold mb-6">من نحن</h3>
-            <p>نحن شركة متخصصة في خدمات التوصيل، نهدف إلى تقديم حلول مبتكرة وآمنة لنقل الطلبات والطرود.</p>
-        </div>
-    </section>
-
     <!-- Contact Us Section -->
-    <section id="contact" class="py-12">
-        <div class="container mx-auto">
+    <section id="contact" class="py-12 bg-gray-200 px-3">
+        <div class="container mx-auto"  data-aos="slide-up" data-aos-delay="100">
             <h3 class="text-3xl font-bold text-center mb-6">اتصل بنا</h3>
             <form class="bg-white p-6 shadow rounded max-w-lg mx-auto">
                 <div class="mb-4">
@@ -244,6 +305,39 @@
             mobileMenu.classList.add('menu-closed');
         });
     </script>
+    <script>
+        AOS.init();
+        // دالة لإنشاء تأثير العد
+        function startCounter(elementId, targetNumber, duration) {
+            const element = document.getElementById(elementId);
+            let currentNumber = 0;
+            const increment = targetNumber / (duration / 16); // 16ms لكل إطار
 
+            const updateCounter = () => {
+                currentNumber += increment;
+                if (currentNumber < targetNumber) {
+                    element.textContent = Math.floor(currentNumber);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = targetNumber; // التأكد من الوصول إلى الرقم النهائي
+                }
+            };
+
+            updateCounter();
+        }
+
+        // بدء العد عند التمرير إلى القسم
+        const achievementsSection = document.getElementById('achievements');
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                startCounter('orderCount', 1212, 2000); // 2000ms (2 ثواني)
+                startCounter('truckCount', 20, 2000);
+                startCounter('distributorCount', 50, 2000);
+                observer.disconnect(); // إيقاف المراقبة بعد التشغيل
+            }
+        }, { threshold: 0.5 }); // بدء العد عند ظهور 50% من القسم
+
+        observer.observe(achievementsSection);
+      </script>
 </body>
 </html>
