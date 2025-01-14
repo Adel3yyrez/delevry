@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+<!-- swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- AOS CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <!-- AOS JS -->
@@ -22,8 +24,7 @@
     <!-- countup -->
     <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.min.js"></script>
 
-   <style>
-        
+    <style>
         *{
             scroll-behavior: smooth;
             font-family: "Cairo", serif;
@@ -103,6 +104,18 @@
             }
         }
 
+    
+        /* إخفاء scrollbar */
+        .swiper-container {
+            overflow: hidden;
+        }
+        .swiper-wrapper {
+            -ms-overflow-style: none; /* لإخفاء scrollbar في IE و Edge */
+            scrollbar-width: none; /* لإخفاء scrollbar في Firefox */
+        }
+        .swiper-wrapper::-webkit-scrollbar {
+            display: none; /* لإخفاء scrollbar في Chrome و Safari */
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
