@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدماتنا</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <style>
+        *{
+            scroll-behavior: smooth;
+            font-family: "Cairo", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-variation-settings:
+                "slnt" 0;
+        }
+        header{
+            background: linear-gradient(to right,#7e56a3 , #2768f4 );
+        }
+        aside{
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <!-- الشريط الجانبي -->
+    <aside dir="rtl" class="fixed hidden md:inline-block right-0 top-0 h-screen w-64 bg-white shadow-lg">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold visible text-blue-600"> 
+                موقع التوصيلات
+            </h2>
+        </div>
+        <hr>
+        <nav class="mt-6">
+            <ul class="space-y-2">
+                <li>
+                    <a href="#" class="flex items-center p-3 text-gray-700 bg-blue-50 ">
+                        <span class="ml-3 flex gap-1 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-HomeAlt1"><path d="M21 19v-6.733a4 4 0 0 0-1.245-2.9L13.378 3.31a2 2 0 0 0-2.755 0L4.245 9.367A4 4 0 0 0 3 12.267V19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"/><path d="M9 15a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6H9v-6z"/></svg>
+                            الرئيسية
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center p-3 text-gray-700 hover:bg-blue-50">
+                        <span class="ml-3 flex gap-1 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-PeopleGroup"><path d="M16.719 19.752l-.64-5.124A3 3 0 0 0 13.101 12h-2.204a3 3 0 0 0-2.976 2.628l-.641 5.124A2 2 0 0 0 9.266 22h5.468a2 2 0 0 0 1.985-2.248z"/><circle cx="12" cy="5" r="3"/><circle cx="4" cy="9" r="2"/><circle cx="20" cy="9" r="2"/><path d="M4 14h-.306a2 2 0 0 0-1.973 1.671l-.333 2A2 2 0 0 0 3.361 20H7"/><path d="M20 14h.306a2 2 0 0 1 1.973 1.671l.333 2A2 2 0 0 1 20.639 20H17"/></svg>
+                            المستخدمين
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center p-3 text-gray-700 hover:bg-blue-50">
+                        <span class="ml-3 flex gap-1 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Gear"><path d="M14 3.269C14 2.568 13.432 2 12.731 2H11.27C10.568 2 10 2.568 10 3.269v0c0 .578-.396 1.074-.935 1.286-.085.034-.17.07-.253.106-.531.23-1.162.16-1.572-.249v0a1.269 1.269 0 0 0-1.794 0L4.412 5.446a1.269 1.269 0 0 0 0 1.794v0c.41.41.48 1.04.248 1.572a7.946 7.946 0 0 0-.105.253c-.212.539-.708.935-1.286.935v0C2.568 10 2 10.568 2 11.269v1.462C2 13.432 2.568 14 3.269 14v0c.578 0 1.074.396 1.286.935.034.085.07.17.105.253.231.531.161 1.162-.248 1.572v0a1.269 1.269 0 0 0 0 1.794l1.034 1.034a1.269 1.269 0 0 0 1.794 0v0c.41-.41 1.04-.48 1.572-.249.083.037.168.072.253.106.539.212.935.708.935 1.286v0c0 .701.568 1.269 1.269 1.269h1.462c.701 0 1.269-.568 1.269-1.269v0c0-.578.396-1.074.935-1.287.085-.033.17-.068.253-.104.531-.232 1.162-.161 1.571.248v0a1.269 1.269 0 0 0 1.795 0l1.034-1.034a1.269 1.269 0 0 0 0-1.794v0c-.41-.41-.48-1.04-.249-1.572.037-.083.072-.168.106-.253.212-.539.708-.935 1.286-.935v0c.701 0 1.269-.568 1.269-1.269V11.27c0-.701-.568-1.269-1.269-1.269v0c-.578 0-1.074-.396-1.287-.935a7.755 7.755 0 0 0-.105-.253c-.23-.531-.16-1.162.249-1.572v0a1.269 1.269 0 0 0 0-1.794l-1.034-1.034a1.269 1.269 0 0 0-1.794 0v0c-.41.41-1.04.48-1.572.249a7.913 7.913 0 0 0-.253-.106C14.396 4.343 14 3.847 14 3.27v0z"/><path d="M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
+                            الإعدادات
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center p-3 text-gray-700 hover:bg-blue-50">
+                        <span class="ml-3 flex gap-1 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-StatisticUp"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 14l4-4 4 4 6-6"/><path d="M18 8h3v3"/></svg>
+                            التقارير
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class=" list-footer absolute bottom-0 p-3 text-center  w-64 ">
+            <hr><br>
+            جميع الحقوق محفوظة 2025
+        </div>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="md:mr-64 mt-16 p-3 md:p-8 ">
+        <!-- الشريط العلوي -->
+        <header class="fixed left-0 top-0 right-0 bg-white shadow">
+            <div class="container mx-auto px-3 md:px-6 py-4 flex justify-between items-center">
+                <!-- زر القائمة (للشاشات الصغيرة) -->
+                <button id="menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+
+                <!-- البحث -->
+                <div class="relative">
+                    <input type="text" placeholder="بحث..." class="bg-gray-100 rounded-full py-2 px-4 pr-10 focus:outline-none" dir="rtl">
+                    <button class="absolute left-3 top-2 text-gray-500">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- الإشعارات وصورة المستخدم -->
+                <div class="flex items-center space-x-6 md:mr-64">
+                    <!-- زر الإشعارات -->
+                    <div class="relative">
+                        <button id="notifications-button" class="text-white focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                            </svg>
+                            <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
+                        </button>
+                        <!-- قائمة الإشعارات -->
+                        <div dir="rtl" id="notifications-dropdown" class="hidden absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg border">
+                            <div class="p-4">
+                                <h4 class="font-semibold mb-3 text-lg">الإشعارات</h4>
+                                <hr>
+                                <ul class="mt-2 space-y-3">
+                                    <li class="text-sm text-gray-700 hover:bg-blue-200 p-1 cursor-pointer ">لديك 3 رسائل جديدة</li>
+                                    <li class="text-sm text-gray-700 hover:bg-blue-200 p-1 cursor-pointer">تمت إضافة مستخدم جديد</li>
+                                    <li class="text-sm text-gray-700 hover:bg-blue-200 p-1 cursor-pointer">تم تحديث الإعدادات</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- صورة المستخدم -->
+                    <img src="https://via.placeholder.com/40" alt="صورة المستخدم" class="w-10 h-10 rounded-full">
+                </div>
+            </div>
+        </header>
+        <!-- قائمة الروابط للشاشات الصغيرة -->
+        <div dir="rtl" id="mobile-menu" class="fixed inset-0 bg-white  z-50 transform transition-transform duration-300 ease-in-out -translate-x-full lg:hidden">
+            <div class="p-6 overflow-y-auto">
+                <!-- زر الإغلاق -->
+                <button id="close-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+
+                <!-- قائمة الروابط -->
+                <div class="p-2 text-center text-blue-700">
+                    <h2 class="text-2xl font-bold"> موقع التوصيلات</h2>
+                </div>
+                <hr>
+                <nav class="mt-6 "> 
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class=" flex gap-1 items-center py-2 px-4  hover:underline ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-HomeAlt1"><path d="M21 19v-6.733a4 4 0 0 0-1.245-2.9L13.378 3.31a2 2 0 0 0-2.755 0L4.245 9.367A4 4 0 0 0 3 12.267V19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"/><path d="M9 15a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6H9v-6z"/></svg>
+                                الصفحة الرئسية
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class=" flex gap-1 items-center py-2 px-4  hover:underline ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-PeopleGroup"><path d="M16.719 19.752l-.64-5.124A3 3 0 0 0 13.101 12h-2.204a3 3 0 0 0-2.976 2.628l-.641 5.124A2 2 0 0 0 9.266 22h5.468a2 2 0 0 0 1.985-2.248z"/><circle cx="12" cy="5" r="3"/><circle cx="4" cy="9" r="2"/><circle cx="20" cy="9" r="2"/><path d="M4 14h-.306a2 2 0 0 0-1.973 1.671l-.333 2A2 2 0 0 0 3.361 20H7"/><path d="M20 14h.306a2 2 0 0 1 1.973 1.671l.333 2A2 2 0 0 1 20.639 20H17"/></svg>
+                                صفحة المستخدمين
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class=" flex gap-1 items-center py-2 px-4  hover:underline  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Gear"><path d="M14 3.269C14 2.568 13.432 2 12.731 2H11.27C10.568 2 10 2.568 10 3.269v0c0 .578-.396 1.074-.935 1.286-.085.034-.17.07-.253.106-.531.23-1.162.16-1.572-.249v0a1.269 1.269 0 0 0-1.794 0L4.412 5.446a1.269 1.269 0 0 0 0 1.794v0c.41.41.48 1.04.248 1.572a7.946 7.946 0 0 0-.105.253c-.212.539-.708.935-1.286.935v0C2.568 10 2 10.568 2 11.269v1.462C2 13.432 2.568 14 3.269 14v0c.578 0 1.074.396 1.286.935.034.085.07.17.105.253.231.531.161 1.162-.248 1.572v0a1.269 1.269 0 0 0 0 1.794l1.034 1.034a1.269 1.269 0 0 0 1.794 0v0c.41-.41 1.04-.48 1.572-.249.083.037.168.072.253.106.539.212.935.708.935 1.286v0c0 .701.568 1.269 1.269 1.269h1.462c.701 0 1.269-.568 1.269-1.269v0c0-.578.396-1.074.935-1.287.085-.033.17-.068.253-.104.531-.232 1.162-.161 1.571.248v0a1.269 1.269 0 0 0 1.795 0l1.034-1.034a1.269 1.269 0 0 0 0-1.794v0c-.41-.41-.48-1.04-.249-1.572.037-.083.072-.168.106-.253.212-.539.708-.935 1.286-.935v0c.701 0 1.269-.568 1.269-1.269V11.27c0-.701-.568-1.269-1.269-1.269v0c-.578 0-1.074-.396-1.287-.935a7.755 7.755 0 0 0-.105-.253c-.23-.531-.16-1.162.249-1.572v0a1.269 1.269 0 0 0 0-1.794l-1.034-1.034a1.269 1.269 0 0 0-1.794 0v0c-.41.41-1.04.48-1.572.249a7.913 7.913 0 0 0-.253-.106C14.396 4.343 14 3.847 14 3.27v0z"/><path d="M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
+                                ادارة الإعدادات
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class=" flex gap-1 items-center py-2 px-4  hover:underline  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-StatisticUp"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 14l4-4 4 4 6-6"/><path d="M18 8h3v3"/></svg>
+                                صفحة التقارير
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class=" list-footer text-blue-700 absolute bottom-0 bg-white  z-10 p-3 text-center  w-full " >
+                <hr><br>
+                جميع الحقوق محفوظة 2025
+            </div>
+        </div>
+        <div class="p-4 text-right">
+            <h2 class="text-2xl font-bold text-blue-600">لوحة التحكم</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-3">
+            <!-- بطاقة 1 -->
+            <div class="bg-white p-6 rounded-lg shadow" dir="rtl">
+                <h3 class="text-xl font-semibold mb-4">عدد المستخدمين</h3>
+                <p class="text-gray-700">1,234 مستخدم</p>
+            </div>
+            <!-- بطاقة 2 -->
+            <div class="bg-white p-6 rounded-lg shadow" dir="rtl">
+                <h3 class="text-xl font-semibold mb-4">الإيرادات</h3>
+                <p class="text-gray-700">$12,345</p>
+            </div>
+            <!-- بطاقة 3 -->
+            <div class="bg-white p-6 rounded-lg shadow" dir="rtl">
+                <h3 class="text-xl font-semibold mb-4">المهام المكتملة</h3>
+                <p class="text-gray-700">45 مهمة</p>
+            </div>
+        </div>
+
+        <!-- جدول بسيط -->
+        <div class="mt-8 bg-white rounded-lg shadow overflow-auto">
+            <table class="w-full ">
+                <thead>
+                    <tr class="border-b">
+                        <th class="p-4 text-right">الاسم</th>
+                        <th class="p-4 text-right">البريد الإلكتروني</th>
+                        <th class="p-4 text-right">الدور</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="p-4">أحمد محمد</td>
+                        <td class="p-4">ahmed@example.com</td>
+                        <td class="p-4">مدير</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="p-4">فاطمة علي</td>
+                        <td class="p-4">fatima@example.com</td>
+                        <td class="p-4">مستخدم</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        document.getElementById('notifications-button').addEventListener('click', function() {
+            const dropdown = document.getElementById('notifications-dropdown');
+            dropdown.classList.toggle('hidden');
+        });
+
+        // إغلاق قائمة الإشعارات عند النقر خارجها
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('notifications-dropdown');
+            const button = document.getElementById('notifications-button');
+            if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.remove('-translate-x-full');
+        });
+
+        // إخفاء القائمة عند النقر على زر الإغلاق
+        document.getElementById('close-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.add('-translate-x-full');
+        });
+
+        // إخفاء القائمة عند النقر خارجها
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuButton = document.getElementById('menu-button');
+            if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+                mobileMenu.classList.add('-translate-x-full');
+            }
+        });
+    </script>
+    
+</body>
+</html>
