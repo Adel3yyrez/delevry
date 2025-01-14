@@ -106,7 +106,6 @@
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
     <!-- Header -->
     <header class="text-white fixed w-full z-50">
         <div class="container mx-auto flex justify-between items-center p-4">
@@ -118,7 +117,7 @@
             </button>
             <nav class="hidden sm:flex">
                 <a href="#services" class="px-4 hover:underline">الخدمات</a>
-                <a href="#order" class="px-4 hover:underline">اطلب الآن</a>
+                <a href="#rating" class="px-4 hover:underline"> اراء المستخدمين</a>
                 <a href="#track" class="px-4 hover:underline">تتبع الطلب</a>
                 <a href="#about" class="px-4 hover:underline">من نحن</a>
                 <a href="#contact" class="px-4 hover:underline">اتصل بنا</a>
@@ -137,7 +136,7 @@
             <hr>
             <ul class="mt-8 space-y-4" dir="rtl">
                 <li><a href="#services" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded">الخدمات</a></li>
-                <li><a href="#order" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded">اطلب الآن</a></li>
+                <li><a href="#rating" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded"> اراء المستخدمين</a></li>
                 <li><a href="#track" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded">تتبع الطلب</a></li>
                 <li><a href="#about" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded">من نحن</a></li>
                 <li><a href="#contact" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded">اتصل بنا</a></li>
@@ -172,13 +171,13 @@
         <div class="animated-waves absolute inset-0 -z-1"></div>
     </section>
     <!-- About Us Section -->
-    <section id="about" class="bg-gray-200 py-12" data-aos="fade" data-aos-delay="50">
+    <section id="about" class="bg-gray-200 py-12" data-aos="fade-up" data-aos-delay="50">
         <div class="container mx-auto text-center">
             <h3 class="text-3xl font-bold mb-6">من نحن</h3>
             <p>نحن شركة متخصصة في خدمات التوصيل، نهدف إلى تقديم حلول مبتكرة وآمنة لنقل الطلبات والطرود.</p>
         </div>
         <!-- Achievements Section -->
-        <div id="achievements" class="py-12 px-3">
+        <div id="achievements" class="py-12 px-3 bg-gray-50">
             <div class="container mx-auto text-center">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Achievement 1: عدد الطلبيات -->
@@ -228,7 +227,7 @@
     </section>
 
     <!-- Order Section -->
-    <section id="order" class="bg-gray-200 py-12 px-3" >
+    <!-- <section id="order" class="bg-gray-200 py-12 px-3" >
         <div class="container mx-auto" data-aos="fade" data-aos-delay="100">
             <h3 class="text-3xl font-bold text-center mb-6">اطلب الآن</h3>
             <form class="bg-white p-6 shadow rounded max-w-lg mx-auto">
@@ -258,6 +257,50 @@
                 <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">متابعة الطلب</button>
             </form>
         </div>
+    </section> -->
+    <!-- rating section  -->
+    <section id="rating" class="py-12 bg-gray-200 px-3">
+        <h3 class="text-3xl text-center font-bold mb-6" data-aos="fade-up" data-aos-delay="50">اراء المستخدمين</h3>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- البطاقة الأولى -->
+                <div class="swiper-slide bg-white rounded-lg shadow-lg p-6 text-center" data-aos="fade-up" data-aos-delay="50">
+                    <img src="public/img/profile.jpg" alt="User 1" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">محمد أحمد</h3>
+                    <div class="text-yellow-400 text-2xl">★★★★★</div>
+                </div>
+                <!-- البطاقة الثانية -->
+                <div class="swiper-slide bg-white rounded-lg shadow-lg p-6 text-center" data-aos="fade-up" data-aos-delay="50">
+                    <img src="public/img/profile.jpg" alt="User 2" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">فاطمة خالد</h3>
+                    <div class="text-yellow-400 text-2xl">★★★★☆</div>
+                </div>
+                <!-- البطاقة الثالثة -->
+                <div class="swiper-slide bg-white rounded-lg shadow-lg p-6 text-center" data-aos="fade-up" data-aos-delay="50">
+                    <img src="public/img/profile.jpg" alt="User 3" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">علي محمود</h3>
+                    <div class="text-yellow-400 text-2xl">★★★★★</div>
+                </div>
+                <!-- البطاقة الرابعة -->
+                <div class="swiper-slide bg-white rounded-lg shadow-lg p-6 text-center" data-aos="fade-up" data-aos-delay="50">
+                    <img src="public/img/profile.jpg" alt="User 4" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">ليلى سعيد</h3>
+                    <div class="text-yellow-400 text-2xl">★★★☆☆</div>
+                </div>
+                <!-- البطاقة الخامسة -->
+                <div class="swiper-slide bg-white rounded-lg shadow-lg p-6 text-center" data-aos="fade-up" data-aos-delay="50">
+                    <img src="public/img/profile.jpg" alt="User 5" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">خالد عمر</h3>
+                    <div class="text-yellow-400 text-2xl">★★★★☆</div>
+                </div>
+                <!-- البطاقة السادسة -->
+                <div class="swiper-slide bg-white rounded-lg shadow-lg p-6 text-center" data-aos="fade-up" data-aos-delay="50">
+                    <img src="public/img/profile.jpg" alt="User 6" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">نورا حسن</h3>
+                    <div class="text-yellow-400 text-2xl">★★★★★</div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Track Order Section -->
@@ -273,7 +316,7 @@
 
     <!-- Contact Us Section -->
     <section id="contact" class="py-12 bg-gray-200 px-3">
-        <div class="container mx-auto"  data-aos="slide-up" data-aos-delay="100">
+        <div class="container mx-auto"  data-aos="fade-up" data-aos-delay="100">
             <h3 class="text-3xl font-bold text-center mb-6">اتصل بنا</h3>
             <form class="bg-white p-6 shadow rounded max-w-lg mx-auto">
                 <div class="mb-4">
@@ -345,6 +388,21 @@
         }, { threshold: 0.5 }); // بدء العد عند ظهور 50% من القسم
 
         observer.observe(achievementsSection);
-      </script>
+    </script>
+    <!-- swiper js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1.2, // عرض بطاقة واحدة وجزء من الثانية على الهواتف
+            spaceBetween: 16, // المسافة بين البطاقات
+            breakpoints: {
+                640: {
+                    slidesPerView: 3.2, // عرض 3 بطاقات وجزء من الرابعة على الشاشات الكبيرة
+                    spaceBetween: 24,
+                },
+            },
+            freeMode: true, // الانتقال السلس بدون تأثيرات
+        });
+    </script>
 </body>
 </html>
