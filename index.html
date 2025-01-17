@@ -119,21 +119,37 @@
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
-    <!-- Header -->
-    <header class="text-white fixed w-full z-50">
+        <!-- Header -->
+    <header class="text-white fixed w-full z-50 ">
         <div class="container mx-auto flex justify-between items-center p-4">
-            <h1 class="text-2xl font-bold">خدمات التوصيل</h1>
+            <h1 class=" text-xl sm:text-2xl font-bold" data-translate="siteTitle">خدمات التوصيل</h1>
+            <div class="relative">
+                <!-- Dropdown Button -->
+                <button id="languageDropdown" class="text-white px-4 flex items-center">
+                    <span id="selectedLanguage">العربية</span>
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div id="dropdownMenu" class="absolute mt-2 w-40 sm:w-48 p-1 bg-white rounded-md shadow-lg hidden">
+                    <a href="#" data-lang="ar" class="block px-4 py-2 rounded-md text-gray-800 hover:bg-blue-500 hover:text-white">العربية</a>
+                    <a href="#" data-lang="fr" class="block px-4 py-2 rounded-md text-gray-800 hover:bg-blue-500 hover:text-white">Français</a>
+                </div>
+            </div>
             <button id="menu-toggle" class="sm:hidden focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
-            <nav class="hidden sm:flex">
-                <a href="#services" class="px-4 hover:underline">الخدمات</a>
-                <a href="#rating" class="px-4 hover:underline"> اراء المستخدمين</a>
-                <a href="#track" class="px-4 hover:underline">تتبع الطلب</a>
-                <a href="#about" class="px-4 hover:underline">من نحن</a>
-                <a href="#contact" class="px-4 hover:underline">اتصل بنا</a>
+            <nav class="hidden sm:flex sm:flex-row-reverse">
+                <a href="#services" class="px-4 hover:underline" data-translate="services">الخدمات</a>
+                <a href="#rating" class="px-4 hover:underline" data-translate="ratings">اراء المستخدمين</a>
+                <a href="#track" class="px-4 hover:underline" data-translate="trackOrder">تتبع الطلب</a>
+                <a href="#about" class="px-4 hover:underline" data-translate="aboutUs">من نحن</a>
+                <a href="#contact" class="px-4 hover:underline" data-translate="contactUs">اتصل بنا</a>
+                
             </nav>
         </div>
         <!-- Sliding Menu for Mobile -->
@@ -144,26 +160,27 @@
                 </svg>
             </button>
             <div class="p-2 text-center">
-                <h2 class="text-2xl font-bold text-blue-700"> موقع التوصيلات</h2>
+                <h2 class="text-2xl font-bold text-blue-700" data-translate="siteTitle">موقع التوصيلات</h2>
             </div>
+            
             <hr>
             <ul class="mt-8 space-y-4" dir="rtl">
-                <li><a href="#services" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded">الخدمات</a></li>
-                <li><a href="#rating" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded"> اراء المستخدمين</a></li>
-                <li><a href="#track" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded">تتبع الطلب</a></li>
-                <li><a href="#about" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded">من نحن</a></li>
-                <li><a href="#contact" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded">اتصل بنا</a></li>
+                <li><a href="#services" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded" data-translate="services">الخدمات</a></li>
+                <li><a href="#rating" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded" data-translate="ratings">اراء المستخدمين</a></li>
+                <li><a href="#track" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded" data-translate="trackOrder">تتبع الطلب</a></li>
+                <li><a href="#about" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded" data-translate="aboutUs">من نحن</a></li>
+                <li><a href="#contact" class="block text-black hover:text-white px-4 py-2 hover:bg-blue-700 rounded" data-translate="contactUs">اتصل بنا</a></li>
             </ul>
-            <div class=" list-footer text-blue-700 absolute bottom-0 z-10 p-3 text-center  w-full " style="left: 50%;transform: translateX(-50%);">
+            <div class="list-footer text-blue-700 absolute bottom-0 z-10 p-3 text-center w-full" style="left: 50%;transform: translateX(-50%);">
                 <hr><br>
-                جميع الحقوق محفوظة 2025
+                <span data-translate="copyright">جميع الحقوق محفوظة 2025</span>
             </div>
         </div>
     </header>
 
     <!-- شريط الأخبار المتحرك -->
-    <div class="news-ticker w-full lg:w-1/3 mx-auto">
-        <span dir="rtl">عرض خاص: احصل على خصم 20% على جميع الطلبات هذا الأسبوع! 🎉</span>
+    <div class="news-ticker w-full lg:w-1/3 mx-auto  text-white p-2 text-center">
+        <span dir="rtl" data-translate="newsTicker">عرض خاص: احصل على خصم 20% على جميع الطلبات هذا الأسبوع! 🎉</span>
     </div>
 
     <!-- Hero Section -->
@@ -175,9 +192,9 @@
             </div>
             <!-- Text Section -->
             <div class="w-full lg:w-1/2 text-center text-white">
-                <h2 class="text-4xl font-bold mb-4">مرحبًا بك في خدمات التوصيل</h2>
-                <p class="text-lg mb-6">نحن نقدم أسرع وأسهل حلول التوصيل لتلبية احتياجاتك.</p>
-                <a href="#order" class="bg-blue-700 shadow-sm  transition-colors text-white py-1 px-24 rounded hover:bg-blue-800">اطلب الآن</a>
+                <h2 class="text-4xl font-bold mb-4" data-translate="HeroTitle">مرحبًا بك في خدمات التوصيل</h2>
+                <p class="text-lg mb-6" data-translate="HeroDescription">نحن نقدم أسرع وأسهل حلول التوصيل لتلبية احتياجاتك.</p>
+                <a href="#order" data-translate="HeroBtn" class="bg-blue-700 shadow-sm  transition-colors text-white py-1 px-24 rounded hover:bg-blue-800"> اطلب الآن </a>
             </div>
         </div>
         <!-- Background Animation -->
@@ -186,30 +203,30 @@
     <!-- About Us Section -->
     <section id="about" class="bg-gray-200 py-12" data-aos="fade-up" data-aos-delay="50">
         <div class="container mx-auto text-center">
-            <h3 class="text-3xl font-bold mb-6">من نحن</h3>
-            <p>نحن شركة متخصصة في خدمات التوصيل، نهدف إلى تقديم حلول مبتكرة وآمنة لنقل الطلبات والطرود.</p>
+            <h3 class="text-3xl font-bold mb-6" data-translate="AboutTitle">من نحن</h3>
+            <p data-translate="AboutDescription">نحن شركة متخصصة في خدمات التوصيل، نهدف إلى تقديم حلول مبتكرة وآمنة لنقل الطلبات والطرود.</p>
         </div>
         <!-- Achievements Section -->
-        <div id="achievements" class="py-12 px-3 bg-gray-50">
+        <div id="achievements" class="py-12 px-3 ">
             <div class="container mx-auto text-center">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Achievement 1: عدد الطلبيات -->
                     <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
                         <img src="public/img/Free shipping-bro.svg" class=" w-24 h-auto mx-auto" alt=" Free shipping Image">
                         <h4><span id="orderCount">0</span>+</h4>
-                        <p>عدد الطلبيات</p>
+                        <p data-translate="orderTitle">عدد الطلبيات</p>
                     </div>
                     <!-- Achievement 2: عدد الشاحنات -->
                     <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
                         <img src="public/img/Free shipping-pana.svg" class=" w-24 h-auto mx-auto" alt=" Free shipping Image">
                         <h4><span id="truckCount">0</span>+</h4>
-                        <p>عدد الشاحنات</p>
+                        <p data-translate="truckCount">عدد الشاحنات</p>
                     </div>
                     <!-- Achievement 3: عدد الموزعين -->
                     <div class="achievement-card" data-aos="fade-up" data-aos-delay="300">
                         <img src="public/img/Delivery-cuate.svg" class=" w-24 h-auto mx-auto" alt=" Free shipping Image">
                         <h4><span id="distributorCount">0</span>+</h4>
-                        <p>عدد الموزعين</p>
+                        <p data-translate="distributorCount">عدد الموزعين</p>
                     </div>
                 </div>
             </div>
@@ -218,22 +235,22 @@
     <!-- Services Section -->
     <section id="services" class="py-12 px-3">
         <div class="container mx-auto text-center">
-            <h3 class="text-3xl font-bold mb-6">خدماتنا</h3>
+            <h3 class="text-3xl font-bold mb-6" data-translate="ServicesTitle">خدماتنا</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-6 shadow-lg rounded-2xl" data-aos="fade-up">
                     <img src="public/img/Logistics-rafiki (1).svg" alt="img" class="w-24 h-auto mx-auto">
-                    <h4 class="text-xl font-bold mb-2">توصيل الطلبات</h4>
-                    <p>نقوم بتوصيل الطلبات بسرعة وأمان.</p>
+                    <h4 class="text-xl font-bold mb-2" data-translate="ServicesCartOneTitle">توصيل الطلبات</h4>
+                    <p data-translate="ServicesCartOneDescr">نقوم بتوصيل الطلبات بسرعة وأمان.</p>
                 </div>
                 <div class="bg-white p-6 shadow-lg rounded-2xl" data-aos="fade-up" data-aos-delay="100">
                     <img src="public/img/Heavy box-amico.svg" alt="img" class="w-24 h-auto mx-auto">
-                    <h4 class="text-xl font-bold mb-2">نقل الطرود</h4>
-                    <p>نقل الطرود الصغيرة والكبيرة بأفضل الأسعار.</p>
+                    <h4 class="text-xl font-bold mb-2"  data-translate="ServicesCartTowTitle">نقل الطرود</h4>
+                    <p data-translate="ServicesCartTowDescr">نقل الطرود الصغيرة والكبيرة بأفضل الأسعار.</p>
                 </div>
                 <div class="bg-white p-6 shadow-lg rounded-2xl" data-aos="fade-up" data-aos-delay="200">
                     <img src="public/img/Take Away-rafiki.svg" alt="img" class="w-24 h-auto mx-auto">
-                    <h4 class="text-xl font-bold mb-2">التوصيل السريع</h4>
-                    <p>خدمة توصيل سريعة في أقل وقت ممكن.</p>
+                    <h4 class="text-xl font-bold mb-2" data-translate="ServicesCartThreeTitle">التوصيل السريع</h4>
+                    <p data-translate="ServicesCartThreeDescr">خدمة توصيل سريعة في أقل وقت ممكن.</p>
                 </div>
             </div>
         </div>
@@ -273,7 +290,7 @@
     </section> -->
     <!-- rating section  -->
     <section id="rating" class="py-12 bg-gray-200 px-3">
-        <h3 class="text-3xl text-center font-bold mb-6" data-aos="fade-up" data-aos-delay="50">اراء المستخدمين</h3>
+        <h3 class="text-3xl text-center font-bold mb-6" data-aos="fade-up" data-aos-delay="50" data-translate="rating">اراء المستخدمين</h3>
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <!-- البطاقة الأولى -->
@@ -319,10 +336,11 @@
     <!-- Track Order Section -->
     <section id="track" class="py-12 px-3">
         <div class="container mx-auto text-center"  data-aos="zoom-in" data-aos-delay="100">
-            <h3 class="text-3xl font-bold mb-6">تتبع الطلب</h3>
+            <h3 class="text-3xl font-bold mb-6"  data-translate="OrderSection">تتبع الطلب</h3>
             <form class="max-w-md mx-auto">
-                <input type="text" class="w-full border border-gray-300 p-2 rounded mb-4" placeholder="أدخل رقم الطلب">
-                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">تتبع</button>
+                <label for="orderNum" class=" block text-sm font-bold mb-2 cursor-pointer " data-translate="OrderSectionInput">رقم الطلب</label>
+                <input id="orderNum" type="text" class="w-full border border-gray-300 p-2 rounded mb-4">
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" data-translate="OrderSectionBtn">تتبع</button>
             </form>
         </div>
     </section>
@@ -330,91 +348,148 @@
     <!-- Contact Us Section -->
     <section id="contact" class="py-12 bg-gray-200 px-3">
         <div class="container mx-auto"  data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-3xl font-bold text-center mb-6">اتصل بنا</h3>
+            <h3 class="text-3xl font-bold text-center mb-6" data-translate="ContactSection">اتصل بنا</h3>
             <form class="bg-white p-6 shadow rounded max-w-lg mx-auto">
                 <div class="mb-4">
-                    <label class="block text-sm font-bold mb-2">الاسم</label>
-                    <input type="text" class="w-full border border-gray-300 p-2 rounded" placeholder="أدخل اسمك">
+                    <label class="block text-sm font-bold mb-2" data-translate="ContactInputName">الاسم</label>
+                    <input type="text" class="w-full border border-gray-300 p-2 rounded">
                 </div>
                 <div class="mb-4">
-                    <label class="block text-sm font-bold mb-2">البريد الإلكتروني</label>
-                    <input type="email" class="w-full border border-gray-300 p-2 rounded" placeholder="أدخل بريدك الإلكتروني">
+                    <label class="block text-sm font-bold mb-2" data-translate="ContactInputEmail">البريد الإلكتروني</label>
+                    <input type="email" class="w-full border border-gray-300 p-2 rounded">
                 </div>
                 <div class="mb-4">
-                    <label class="block text-sm font-bold mb-2">الرسالة</label>
-                    <textarea class="w-full border border-gray-300 p-2 rounded" rows="4" placeholder="أدخل رسالتك"></textarea>
+                    <label class="block text-sm font-bold mb-2" data-translate="ContactInputLetter">الرسالة</label>
+                    <textarea class="w-full border border-gray-300 p-2 rounded" rows="4" ></textarea>
                 </div>
-                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">إرسال</button>
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" data-translate="ContactInputBtn">إرسال</button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-blue-600 text-white py-4 text-center">
-        <p>&copy; 2025 جميع الحقوق محفوظة لخدمات التوصيل.</p>
+        <p data-translate="footer">&copy; 2025 جميع الحقوق محفوظة لخدمات التوصيل.</p>
     </footer>
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const closeMenu = document.getElementById('close-menu');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.remove('menu-closed');
-            mobileMenu.classList.add('menu-open');
-        });
-
-        closeMenu.addEventListener('click', () => {
-            mobileMenu.classList.remove('menu-open');
-            mobileMenu.classList.add('menu-closed');
-        });
-    </script>
-    <script>
-        AOS.init();
-        // دالة لإنشاء تأثير العد
-        function startCounter(elementId, targetNumber, duration) {
-            const element = document.getElementById(elementId);
-            let currentNumber = 0;
-            const increment = targetNumber / (duration / 16); // 16ms لكل إطار
-
-            const updateCounter = () => {
-                currentNumber += increment;
-                if (currentNumber < targetNumber) {
-                    element.textContent = Math.floor(currentNumber);
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    element.textContent = targetNumber; // التأكد من الوصول إلى الرقم النهائي
+    <!-- swiper js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- main script -->
+    <script src="public/js/main.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <script>
+        $(document).ready(function() {
+            // ملف الترجمة
+            const translations = {
+                ar: {
+                    siteTitle: "خدمات التوصيل",
+                    services: "الخدمات",
+                    ratings: "اراء المستخدمين",
+                    trackOrder: "تتبع الطلب",
+                    aboutUs: "من نحن",
+                    contactUs: "اتصل بنا",
+                    copyright: "جميع الحقوق محفوظة 2025",
+                    newsTicker: "عرض خاص: احصل على خصم 20% على جميع الطلبات هذا الأسبوع! 🎉",
+                    HeroTitle : "مرحبًا بك في خدمات التوصيل",
+                    HeroDescription : 'نحن نقدم أسرع وأسهل حلول التوصيل لتلبية احتياجاتك.',
+                    HeroBtn : "اطلب الآن",
+                    AboutTitle : "من نحن",
+                    AboutDescription : "نحن شركة متخصصة في خدمات التوصيل، نهدف إلى تقديم حلول مبتكرة وآمنة لنقل الطلبات والطرود.",
+                    orderTitle :"عدد الطلبيات",
+                    truckCount : "عدد الشاحنات",
+                    distributorCount : "عدد الموزعين",
+                    ServicesTitle : "خدماتنا",
+                    ServicesCartOneTitle : "توصيل الطلبات",
+                    ServicesCartOneDescr : "نقوم بتوصيل الطلبات بسرعة وأمان.",
+                    ServicesCartTowTitle : "نقل الطرود",
+                    ServicesCartTowDescr : "نقل الطرود الصغيرة والكبيرة بأفضل الأسعار.",
+                    ServicesCartThreeTitle : "التوصيل السريع",
+                    ServicesCartThreeDescr : "خدمة توصيل سريعة في أقل وقت ممكن.",
+                    rating : "اراء المستخدمين",
+                    OrderSection : "تتبع الطلب",
+                    OrderSectionInput : "رقم الطلب",
+                    OrderSectionBtn : "تتبع",
+                    ContactSection : "اتصل بنا",
+                    ContactInputName : "الاسم",
+                    ContactInputEmail : "البريد الإلكتروني",
+                    ContactInputLetter : "الرسالة",
+                    ContactInputBtn : "إرسال",
+                    footer : "2025 جميع الحقوق محفوظة لخدمات التوصيل."
+                },
+                fr: {
+                    siteTitle: "Services de livraison",
+                    services: "Services",
+                    ratings: "Avis des utilisateurs",
+                    trackOrder: "Suivi de commande",
+                    aboutUs: "À propos de nous",
+                    contactUs: "Contactez-nous",
+                    copyright: "Tous droits réservés 2025",
+                    newsTicker: "Offre spéciale : Obtenez 20% de réduction sur toutes les commandes cette semaine ! 🎉",
+                    HeroTitle: "Bienvenue dans les services de livraison",
+                    HeroDescription: "Nous offrons les solutions de livraison les plus rapides et les plus simples pour répondre à vos besoins.",
+                    HeroBtn: "Commandez maintenant",
+                    AboutTitle: "À propos de nous",
+                    AboutDescription: "Nous sommes une entreprise spécialisée dans les services de livraison, visant à fournir des solutions innovantes et sécurisées pour le transport des commandes et des colis.",
+                    orderTitle: "Nombre de commandes",
+                    truckCount: "Nombre de camions",
+                    distributorCount: "Nombre de distributeurs",
+                    ServicesTitle: "Nos services",
+                    ServicesCartOneTitle: "Livraison de commandes",
+                    ServicesCartOneDescr: "Nous livrons les commandes rapidement et en toute sécurité.",
+                    ServicesCartTowTitle: "Transport de colis",
+                    ServicesCartTowDescr: "Transport de petits et grands colis aux meilleurs prix.",
+                    ServicesCartThreeTitle: "Livraison express",
+                    ServicesCartThreeDescr: "Service de livraison rapide en un temps record.",
+                    rating: "Avis des utilisateurs",
+                    OrderSection: "Suivi de commande",
+                    OrderSectionInput: "Numéro de commande",
+                    OrderSectionBtn: "Suivre",
+                    ContactSection: "Contactez-nous",
+                    ContactInputName: "Nom",
+                    ContactInputEmail: "E-mail",
+                    ContactInputLetter: "Message",
+                    ContactInputBtn: "Envoyer",
+                    footer: "© 2025 Tous droits réservés aux services de livraison."
                 }
             };
 
-            updateCounter();
-        }
+            // تحميل اللغة المحفوظة من localStorage
+            let savedLang = localStorage.getItem('selectedLang') || 'ar'; // اللغة الافتراضية
+            updateLanguage(savedLang);
 
-        // بدء العد عند التمرير إلى القسم
-        const achievementsSection = document.getElementById('achievements');
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                startCounter('orderCount', 1212, 2000); // 2000ms (2 ثواني)
-                startCounter('truckCount', 20, 2000);
-                startCounter('distributorCount', 50, 2000);
-                observer.disconnect(); // إيقاف المراقبة بعد التشغيل
+            // فتح/إغلاق القائمة المنسدلة
+            $('#languageDropdown').click(function(e) {
+                e.stopPropagation();
+                $('#dropdownMenu').toggleClass('hidden');
+            });
+
+            // إغلاق القائمة عند النقر خارجها
+            $(document).click(function() {
+                $('#dropdownMenu').addClass('hidden');
+            });
+
+            // منع إغلاق القائمة عند النقر داخلها
+            $('#dropdownMenu').click(function(e) {
+                e.stopPropagation();
+            });
+
+            // تغيير اللغة عند الاختيار
+            $('#dropdownMenu a').click(function(e) {
+                e.preventDefault();
+                const lang = $(this).data('lang');
+                localStorage.setItem('selectedLang', lang); // حفظ اللغة في localStorage
+                updateLanguage(lang);
+                $('#dropdownMenu').addClass('hidden');
+            });
+
+            // تحديث النصوص بناءً على اللغة
+            function updateLanguage(lang) {
+                $('#selectedLanguage').text(lang === 'ar' ? 'العربية' : 'Français');
+                $('[data-translate]').each(function() {
+                    const key = $(this).data('translate');
+                    $(this).text(translations[lang][key]);
+                });
             }
-        }, { threshold: 0.5 }); // بدء العد عند ظهور 50% من القسم
-
-        observer.observe(achievementsSection);
-    </script>
-    <!-- swiper js -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1.2, // عرض بطاقة واحدة وجزء من الثانية على الهواتف
-            spaceBetween: 16, // المسافة بين البطاقات
-            breakpoints: {
-                640: {
-                    slidesPerView: 3.2, // عرض 3 بطاقات وجزء من الرابعة على الشاشات الكبيرة
-                    spaceBetween: 24,
-                },
-            },
-            freeMode: true, // الانتقال السلس بدون تأثيرات
         });
     </script>
 </body>
